@@ -1,0 +1,26 @@
+{
+  "name": "ev3",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Alex Coulcher <alex@polyglot.rodeo>",
+  "homepage": "https://github.com/moonthug/node-mindstorms/tree/master/packages/ev3#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonthug/node-mindstorms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moonthug/node-mindstorms/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf ./dist",
+    "lint": "eslint . --ext .ts",
+    "start": "node dist/index.js",
+    "start:debug": "ts-node src/index.ts"
+  }
+}
