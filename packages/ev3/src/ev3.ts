@@ -1,6 +1,6 @@
 import SerialPort from 'serialport';
 
-import { Protocol } from '@node-mindstorms/ev3-protocol';
+import { createOperationPayload, tone, getLBatt } from '@node-mindstorms/ev3-protocol';
 
 export class Ev3 {
 
@@ -21,7 +21,7 @@ export class Ev3 {
    * @param serialPort
    */
   constructor (serialPort: string) {
-    this._messageCounter = 6;
+    this._messageCounter = 0;
 
     this.port = new SerialPort(serialPort, {
       autoOpen: false,
@@ -30,6 +30,7 @@ export class Ev3 {
       parity: 'none',
       stopBits: 1
     });
+    this._initialisePort();
   }
 
   /**
@@ -63,20 +64,27 @@ export class Ev3 {
    * @param frequency
    * @param duration
    */
-  async playTone (volume: number, frequency: number, duration: number) {
-    const result = await this.execute(Protocol.playTone(volume, frequency, duration));
+  async tone (volume: number, frequency: number, duration: number) {
+    const result = await this.execute(tone(volume, frequency, duration));
     return this._delay(duration);
   };
 
   /**
    *
-   * @param command
    */
-  async execute (command: Buffer) {
+  async getLBatt () {
+    return this.execute(getLBatt());
+  };
+
+  /**
+   *
+   * @param operation
+   */
+  async execute (operation: Buffer) {
     return new Promise(((resolve, reject) => {
-      const commandPayload = Protocol.createCommandPayload(command, this._messageCounter);
-      console.log(commandPayload.toString('hex'));
-      this.port.write(commandPayload, (err) => {
+      const operationPayload = createOperationPayload(operation, this._messageCounter);
+      console.log(`WRITE: ${operationPayload.toString('hex').toUpperCase()}`);
+      this.port.write(operationPayload, (err) => {
         if (err) {
           return reject(err);
         }

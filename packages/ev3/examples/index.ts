@@ -6,10 +6,16 @@ const main = async () => {
   const ev3 = new Ev3('/dev/tty.EV3-SerialPort');
 
   await ev3.connect();
-  await ev3.playTone(100, 262, 200);
-  await ev3.playTone(100, 392, 200);
-  await ev3.playTone(100, 523, 200);
-  await ev3.disconnect();
+
+
+  await ev3.tone(1, 262, 30);
+  await ev3.tone(1, 353, 30);
+
+  await ev3.getLBatt();
+
+  setTimeout(async () => {
+    await ev3.disconnect();
+  }, 1000 * 3)
 };
 
 
