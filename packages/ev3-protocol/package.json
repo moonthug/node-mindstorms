@@ -6,6 +6,9 @@
   "homepage": "https://github.com/moonthug/node-mindstorms/tree/master/packages/ev3#readme",
   "license": "ISC",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "src": "src"
   },
@@ -24,5 +27,5 @@
     "start:debug": "ts-node src/index.ts",
     "watch": "tsc --watch"
   },
-  "gitHead": "8eca4e0b90384ee880179c7f2467620a4ed14aa5"
+  "gitHead": "3e4c608e0f28614ad42cb1668365e0a4b7537027"
 }
