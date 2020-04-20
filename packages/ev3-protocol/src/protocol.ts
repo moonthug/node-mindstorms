@@ -42,7 +42,7 @@ export class Protocol {
    * @param duration
    */
   static playTone (volume: number, frequency: number, duration: number): Buffer {
-    const command = Buffer.alloc(13);
+    const command = Buffer.alloc(15);
     command.writeUInt8(COMMAND_TYPE.DIRECT_COMMAND_NO_REPLY);
     command.writeUInt16LE(0, 1); // UNUSED?
     command.writeUInt8(OP_CODES.SOUND, 3);

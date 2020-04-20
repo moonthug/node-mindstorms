@@ -5,7 +5,8 @@
   "scripts": {
     "build": "lerna run build",
     "prepublish": "npm run build",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "watch": "lerna run --parallel watch"
   },
   "repository": {
     "type": "git",

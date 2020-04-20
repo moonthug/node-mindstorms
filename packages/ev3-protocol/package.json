@@ -5,7 +5,7 @@
   "author": "Alex Coulcher <alex@polyglot.rodeo>",
   "homepage": "https://github.com/moonthug/node-mindstorms/tree/master/packages/ev3#readme",
   "license": "ISC",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "directories": {
     "src": "src"
   },
@@ -21,6 +21,7 @@
     "prebuild": "rm -rf ./dist",
     "lint": "eslint . --ext .ts",
     "start": "node dist/index.js",
-    "start:debug": "ts-node src/index.ts"
+    "start:debug": "ts-node src/index.ts",
+    "watch": "tsc --watch"
   }
 }
