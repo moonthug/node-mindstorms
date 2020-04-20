@@ -1,6 +1,9 @@
 {
   "name": "root",
   "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "lerna run build",
     "prepublish": "npm run build",
