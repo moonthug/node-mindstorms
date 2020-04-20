@@ -1,6 +1,6 @@
 {
   "name": "@node-mindstorms/ev3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "> TODO: description",
   "author": "Alex Coulcher <alex@polyglot.rodeo>",
   "homepage": "https://github.com/moonthug/node-mindstorms/tree/master/packages/ev3#readme",
@@ -25,10 +25,11 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@node-mindstorms/ev3-protocol": "^0.0.2",
+    "@node-mindstorms/ev3-protocol": "^0.0.3",
     "serialport": "^8.0.7"
   },
   "devDependencies": {
     "@types/serialport": "^8.0.0"
-  }
+  },
+  "gitHead": "6dfe700b222f88ecc87f099a35e8684aa17833b6"
 }

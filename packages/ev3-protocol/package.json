@@ -1,6 +1,6 @@
 {
   "name": "@node-mindstorms/ev3-protocol",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "> TODO: description",
   "author": "Alex Coulcher <alex@polyglot.rodeo>",
   "homepage": "https://github.com/moonthug/node-mindstorms/tree/master/packages/ev3#readme",
@@ -23,5 +23,6 @@
     "start": "node dist/index.js",
     "start:debug": "ts-node src/index.ts",
     "watch": "tsc --watch"
-  }
+  },
+  "gitHead": "6dfe700b222f88ecc87f099a35e8684aa17833b6"
 }
