@@ -24,5 +24,5 @@
     "start:debug": "ts-node src/index.ts",
     "watch": "tsc --watch"
   },
-  "gitHead": "6dfe700b222f88ecc87f099a35e8684aa17833b6"
+  "gitHead": "6db5257a22cea43e7645e33fae80770aaedafede"
 }
