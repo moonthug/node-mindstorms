@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const ev3 = require('ev3');
+const ev3 = require('@node-mindstorms/ev3');
 
 // TODO: DEMONSTRATE API
 ```
